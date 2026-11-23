@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Litterbox Cafe | Coffee, tea &amp; pastries in Baguio</title>
+<meta name="description" content="Freshly roasted coffee, homemade pastries, and slow mornings at Litterbox Cafe on Session Road, Baguio City.">
+<link rel="icon" href="cafe-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="cafe-website.css">
+</head>
+<body>
+
+<!-- ========== NAVIGATION BAR ========== -->
+<header>
+  <nav aria-label="Main">
+    <a href="#home" class="logo"><img class="logo-image" src="cafe-logo.png" alt="" width="40" height="40">Litterbox Cafe</a>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><button class="cart-btn" id="open-cart">Order (<span id="cart-count">0</span>)</button></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="home">
+    <div class="hero-text">
+      <h1>Good coffee, slow mornings.</h1>
+      <p>Freshly roasted beans, homemade pastries, and a table with your name on it. Come say hi.</p>
+      <div class="actions">
+        <a href="#menu" class="btn">See the menu</a>
+        <a href="#contact" class="btn ghost">Visit us</a>
+      </div>
+    </div>
+    <img class="hero-art" src="hero-cafe.png" width="546" height="737" alt="Line drawing of two cats sitting on the awning of a small cafe">
+  </section>
+
+  <!-- ========== MENU ========== -->
+  <section id="menu">
+    <h2>Menu</h2>
+    <p class="lead">Tap a category to filter, then add items to your order.</p>
+    <div class="tabs" id="tabs">
+      <button class="tab" data-cat="all" aria-pressed="true">All</button>
+      <button class="tab" data-cat="coffee" aria-pressed="false">Coffee</button>
+      <button class="tab" data-cat="tea" aria-pressed="false">Tea</button>
+      <button class="tab" data-cat="food" aria-pressed="false">Food</button>
+    </div>
+    <div class="grid" id="menu-grid"></div>
+  </section>
+
+  <!-- ========== ABOUT: THE LITTLE CAFE BOOK ========== -->
+  <section id="about" class="about-section">
+    <div class="about-book-wrap">
+      <div class="book-heading">
+        <span class="eyebrow">A FEW PAGES ABOUT US</span>
+        <h2>A little book of <em>Litterbox.</em></h2>
+        <p class="lead">Take a moment, turn a page, and get to know our little corner.</p>
+      </div>
+
+      <div class="about-book" aria-label="About Litterbox Cafe, an interactive book">
+        <div class="book-spine" aria-hidden="true"></div>
+        <article class="book-page is-active" data-page="0" aria-hidden="false">
+          <span class="page-kicker">CHAPTER 01 · OUR STORY</span>
+          <h3>A little place<br><em>to land.</em></h3>
+          <p>Litterbox Cafe is an imagined neighborhood hideaway for unhurried mornings, comforting cups, and conversations that make an ordinary day feel special.</p>
+          <p>Inspired by the quiet charm of Baguio and the curious cats who always find the sunniest seat, we made a place that feels easy to come back to.</p>
+          <span class="page-foot">Made for slow mornings <span>✳</span></span>
+        </article>
+
+        <article class="book-page" data-page="1" aria-hidden="true" hidden>
+          <span class="page-kicker">CHAPTER 02 · THE LITTERBOX FEELING</span>
+          <h3>Little things<br><em>we love.</em></h3>
+          <ul class="book-values">
+            <li><span>01</span><div><strong>Comfort in every cup</strong><p>Familiar favorites, thoughtfully made for whatever kind of day you're having.</p></div></li>
+            <li><span>02</span><div><strong>Room to slow down</strong><p>A cozy corner for reading, catching up, or doing a little bit of nothing.</p></div></li>
+            <li><span>03</span><div><strong>A little cat energy</strong><p>Sunny spots, curious company, and absolutely no rush to leave.</p></div></li>
+          </ul>
+          <span class="page-foot">The simple things matter <span>♡</span></span>
+        </article>
+
+        <article class="book-page" data-page="2" aria-hidden="true" hidden>
+          <span class="page-kicker">CHAPTER 03 · WHEN TO VISIT</span>
+          <h3>Our door is<br><em>open.</em></h3>
+          <p class="page-intro">Come by when you need a warm cup and a quiet little break.</p>
+          <div class="book-hours">
+            <div><span>Monday – Friday</span><strong>7:00 AM – 7:00 PM</strong></div>
+            <div><span>Saturday</span><strong>8:00 AM – 8:00 PM</strong></div>
+            <div><span>Sunday</span><strong>8:00 AM – 5:00 PM</strong></div>
+          </div>
+          <p class="hours-footnote">Best enjoyed slowly. Cats may be napping.</p>
+          <span class="page-foot">See you soon <span>◷</span></span>
+        </article>
+
+        <article class="book-page book-last-page" data-page="3" aria-hidden="true" hidden>
+          <span class="page-kicker">CHAPTER 04 · A LITTLE NOTE</span>
+          <div class="book-note-layout">
+            <div>
+              <h3>Stay for<br><em>one more.</em></h3>
+              <p>One more sip. One more story. One more minute in your favorite seat.</p>
+              <p>That is the kind of day we hope you'll find here.</p>
+              <a class="btn" href="#contact">Come say hello</a>
+            </div>
+            <img src="woman.png" width="303" height="438" alt="Hand-drawn illustration of a woman enjoying a cup of coffee">
+          </div>
+          <span class="page-foot">“Good things take time.” <span>— Litterbox Cafe</span></span>
+        </article>
+      </div>
+
+      <div class="book-controls">
+        <button class="book-arrow" id="about-prev" type="button" disabled aria-label="Previous page">← <span>Previous</span></button>
+        <div class="book-progress" aria-live="polite">
+          <span id="about-page-label">01 / 04</span>
+          <div class="book-progress-track"><span id="about-progress-fill"></span></div>
+          <span id="about-chapter-label">Our story</span>
+        </div>
+        <button class="book-arrow" id="about-next" type="button" aria-label="Next page"><span>Next</span> →</button>
+      </div>
+      <p class="book-hint">Use the arrows to turn the pages</p>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section id="contact">
+    <div class="two-col">
+      <div>
+        <h2>Find us</h2>
+        <p class="lead">123 Session Road, Baguio City<br><a href="mailto:Litterbox@ygmail.com">Litterbox@ygmail.com</a><br><a href="tel:+639947412397">+63 994 74 12397</a></p>
+      </div>
+      <form class="card" id="contact-form" novalidate>
+        <h3>Send a message</h3>
+        <label for="name">Name</label>
+        <input id="name" name="name" autocomplete="name" required>
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" autocomplete="email" required>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+        <p class="form-msg" id="form-msg" role="status"></p>
+        <button class="btn" type="submit">Send message</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>&copy; <span id="year"></span> Litterbox Cafe. All rights reserved.</footer>
+
+<!-- ========== ORDER DRAWER ========== -->
+<aside class="drawer" id="drawer" aria-label="Your order" aria-hidden="true">
+  <div class="drawer-head">
+    <h3>Your order</h3>
+    <button class="close" id="close-cart" aria-label="Close order">&times;</button>
+  </div>
+  <ul id="cart-items"></ul>
+  <div class="total"><span>Total</span><span id="cart-total">₱0.00</span></div>
+  <button class="btn" id="checkout">Place order</button>
+</aside>
+
+<script src="cafe-website.js"></script>
+</body>
+</html>
